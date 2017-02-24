@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y \
 
 # Copy the video-processing script into the container
 ## THIS IS NOT WORKING
-COPY process-video.sh /home/ubuntu/
-COPY manager.sh /home/ubuntu/
+COPY process-video /home/ubuntu/
+COPY manager /home/ubuntu/

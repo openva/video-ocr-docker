@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Make sure we have the parameters.
+if [ -z "$1" ]; then
+	exit
+fi
+if [ -z "$2" ]; then
+	exit
+fi
+
+# Localize the variables.
+URL="$1"
+CHAMBER="$2"
+
+# Get the file.
+curl -s -o video.mp4 "$URL"
+
+# Run the script.
+./process-video video "$CHAMBER"
